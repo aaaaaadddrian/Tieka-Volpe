@@ -52,12 +52,71 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5550593049011392667, guid: 649c588e7157da44db5d9fc23930aeaa, type: 3}
+    - target: {fileID: 6264507486469241197, guid: 012b971a75b3cdd409ec4ed374c4485d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7270274904683423478, guid: 012b971a75b3cdd409ec4ed374c4485d, type: 3}
       propertyPath: m_Name
-      value: var
+      value: sandwhich
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6264507486469241197, guid: 012b971a75b3cdd409ec4ed374c4485d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7270274904683423478, guid: 012b971a75b3cdd409ec4ed374c4485d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5337874834955727496}
   m_SourcePrefab: {fileID: 100100000, guid: 012b971a75b3cdd409ec4ed374c4485d, type: 3}
+--- !u!1 &729661839384913408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7270274904683423478, guid: 012b971a75b3cdd409ec4ed374c4485d, type: 3}
+  m_PrefabInstance: {fileID: 7981912436530053366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &5337874834955727496
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729661839384913408}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.006902188, y: -0.009202838}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.2199999, y: 1.2299999}
+    newSize: {x: 0.97999996, y: 1.0999999}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.040545, y: 1.0735521}
+  m_EdgeRadius: 0

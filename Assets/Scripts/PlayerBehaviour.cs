@@ -3,8 +3,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerBehaviour : MonoBehaviour{
     public float speed;
-    public GameObject fruit;
+    private GameObject currentCookie;
     public float offY;
+    public GameObject cookie;
 
     void Start(){
        
@@ -13,23 +14,24 @@ public class PlayerBehaviour : MonoBehaviour{
     
     void Update(){
 
-        if(fruit != null){
+        if(currentCookie != null){
             Vector3 playerPos = transform.position;
-            Vector3 fruitOffset = new Vector3(0.0f, offY, 0.0f);
-            fruit.transform.position = playerPos + fruitOffset;
-            Rigidbody2D body = fruit.GetComponent<Rigidbody2D>();
+            Vector3 cookieOffset = new Vector3(0.0f, offY, 0.0f);
+            currentCookie.transform.position = playerPos + cookieOffset;
+            Rigidbody2D body = currentCookie.GetComponent<Rigidbody2D>();
             body.gravityScale = 0f;
-            Collider2D collider = fruit.GetComponent<Collider2D>();
+            Collider2D collider = currentCookie.GetComponent<Collider2D>();
             collider.enabled = false;
+        }else{
+            currentCookie = Instantiate(cookie);
         }
 
         if(Keyboard.current.spaceKey.wasPressedThisFrame){
-            Rigidbody2D body = fruit.GetComponent<Rigidbody2D>();
+            Rigidbody2D body = currentCookie.GetComponent<Rigidbody2D>();
             body.gravityScale = 1.0f;
-            Collider2D collider = fruit.GetComponent<Collider2D>();
+            Collider2D collider = currentCookie.GetComponent<Collider2D>();
             collider.enabled = true;
-            fruit = null;
-
+            currentCookie = null;
         }
 
         if(Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed){

@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8429655564606336314, guid: 649c588e7157da44db5d9fc23930aeaa, type: 3}
+    - target: {fileID: 3984935715344549593, guid: bedf367184de85740a52de29baa80d38, type: 3}
+      propertyPath: 'treats.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1007844878627038893, guid: ff96ae1ad4f07d54e86157c0f5774e83, type: 3}
     - target: {fileID: 4445211858726875403, guid: bedf367184de85740a52de29baa80d38, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -54,7 +58,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6061761781978857716, guid: bedf367184de85740a52de29baa80d38, type: 3}
       propertyPath: m_Name
-      value: var1
+      value: peppermint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061761781978857716, guid: bedf367184de85740a52de29baa80d38, type: 3}
+      propertyPath: m_TagString
+      value: peppermint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

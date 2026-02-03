@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sandwhich
       objectReference: {fileID: 0}
+    - target: {fileID: 7270274904683423478, guid: 012b971a75b3cdd409ec4ed374c4485d, type: 3}
+      propertyPath: m_TagString
+      value: sandwhich
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6264507486469241197, guid: 012b971a75b3cdd409ec4ed374c4485d, type: 3}
     m_RemovedGameObjects: []

@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: jello
       objectReference: {fileID: 0}
+    - target: {fileID: 729661839384913408, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
+      propertyPath: m_TagString
+      value: jello
+      objectReference: {fileID: 0}
     - target: {fileID: 4050270210419308955, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
       propertyPath: m_Radius
       value: 0.5696222

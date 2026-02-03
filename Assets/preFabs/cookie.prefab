@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1716773705372459704}
   - component: {fileID: 6901220482342793568}
   - component: {fileID: -1870540965707374737}
+  - component: {fileID: 3984935715344549593}
   m_Layer: 0
   m_Name: cookie
-  m_TagString: Untagged
+  m_TagString: cookie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6061761781978857716}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17437541, y: -2.8895001, z: 0}
+  m_LocalPosition: {x: 0, y: -1.06, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -156,3 +157,17 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.008276713, y: 0}
   m_Radius: 0.41757244
+--- !u!114 &3984935715344549593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6061761781978857716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a5f50172d220841859fc40802a7392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionDetecter
+  treats:
+  - {fileID: 7270274904683423478, guid: 012b971a75b3cdd409ec4ed374c4485d, type: 3}

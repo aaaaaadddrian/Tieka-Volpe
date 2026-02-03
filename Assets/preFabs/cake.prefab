@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cake
       objectReference: {fileID: 0}
+    - target: {fileID: 729661839384913408, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
+      propertyPath: m_TagString
+      value: cake
+      objectReference: {fileID: 0}
     - target: {fileID: 4050270210419308955, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
       propertyPath: m_Radius
       value: 0.9966313
@@ -96,6 +100,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 729661839384913408, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
       insertIndex: -1
       addedObject: {fileID: 940757536118858569}
+    - targetCorrespondingSourceObject: {fileID: 729661839384913408, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4752793303898442948}
   m_SourcePrefab: {fileID: 100100000, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
 --- !u!1 &8885274352344101854 stripped
 GameObject:
@@ -207,3 +214,17 @@ PolygonCollider2D:
       - {x: 1.1262916, y: -1.2575088}
       - {x: 1.2419007, y: -1.2778134}
   m_UseDelaunayMesh: 1
+--- !u!114 &4752793303898442948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8885274352344101854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a5f50172d220841859fc40802a7392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionDetecter
+  treats:
+  - {fileID: 6061761781978857716, guid: bedf367184de85740a52de29baa80d38, type: 3}

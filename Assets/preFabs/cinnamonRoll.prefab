@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cinnamonRoll
       objectReference: {fileID: 0}
+    - target: {fileID: 729661839384913408, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
+      propertyPath: m_TagString
+      value: cinnamon roll
+      objectReference: {fileID: 0}
     - target: {fileID: 4050270210419308955, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
       propertyPath: m_Radius
       value: 1.1914564
@@ -88,6 +92,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 729661839384913408, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
       insertIndex: -1
       addedObject: {fileID: 26151134947660704}
+    - targetCorrespondingSourceObject: {fileID: 729661839384913408, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4820955007530007722}
   m_SourcePrefab: {fileID: 100100000, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
 --- !u!1 &1763273539583870774 stripped
 GameObject:
@@ -130,3 +137,17 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.008610089}
   m_Radius: 1.0765421
+--- !u!114 &4820955007530007722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763273539583870774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a5f50172d220841859fc40802a7392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionDetecter
+  treats:
+  - {fileID: 475222148970893408, guid: 687ad8291847a0644815b834ed70c1ed, type: 3}

@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: icecream
       objectReference: {fileID: 0}
+    - target: {fileID: 729661839384913408, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
+      propertyPath: m_TagString
+      value: icecream
+      objectReference: {fileID: 0}
     - target: {fileID: 4050270210419308955, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
       propertyPath: m_Radius
       value: 0.9198328
@@ -80,6 +84,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7598318321254047789, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
+      propertyPath: 'treats.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1763273539583870774, guid: 07268d2b862c20947a15444850aa5a06, type: 3}
     m_RemovedComponents:
     - {fileID: 4050270210419308955, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
     - {fileID: 5337874834955727496, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}

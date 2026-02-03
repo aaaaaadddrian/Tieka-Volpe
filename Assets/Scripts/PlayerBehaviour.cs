@@ -29,6 +29,7 @@ public class PlayerBehaviour : MonoBehaviour{
         }else{
             currentCookie = Instantiate(treatsToDrop[Random.Range(0, treatsToDrop.Length)]);
         }
+        
 
         if(Keyboard.current.spaceKey.wasPressedThisFrame){
             Rigidbody2D body = currentCookie.GetComponent<Rigidbody2D>();

@@ -17,8 +17,9 @@ public class CollisionDetecter : MonoBehaviour
 
    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == this.gameObject.tag && this.gameObject.transform.position.y > collision.gameObject.transform.position.y && this.gameObject.tag != "cake")
+        if ((collision.gameObject.tag == this.gameObject.tag && this.gameObject.transform.position.y > collision.gameObject.transform.position.y) && this.gameObject.tag != "cake")
         {
+            print(collision.gameObject.name);
             Destroy(collision.gameObject);
             Vector3 pos = this.gameObject.transform.position;
             Destroy(this.gameObject);

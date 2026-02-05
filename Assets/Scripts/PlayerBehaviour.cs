@@ -7,6 +7,8 @@ public class PlayerBehaviour : MonoBehaviour{
     public float offY;
     public GameObject cookie;
     public GameObject[] treatsToDrop;
+    public float maxX;
+    public float minX;
     
     //cookie -> peppermint -> jello -> sand -> donut -> muffin -> icecream -> cinnamon roll-> cupcake -> cake
     
@@ -39,13 +41,14 @@ public class PlayerBehaviour : MonoBehaviour{
             currentCookie = null;
         }
 
-        if(Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed){
+        if((Keyboard.current.leftArrowKey.isPressed && transform.position.x > minX)|| (Keyboard.current.aKey.isPressed && transform.position.x > minX)){
             Vector3 newPosition = transform.position;
             newPosition.x = newPosition.x - speed;
             transform.position = newPosition;
+            
         }
 
-        if(Keyboard.current.rightArrowKey.isPressed || Keyboard.current.dKey.isPressed){
+        if((Keyboard.current.rightArrowKey.isPressed && transform.position.x < maxX)|| (Keyboard.current.dKey.isPressed && transform.position.x < maxX)){
             Vector3 newPosition = transform.position;
             newPosition.x = newPosition.x + speed;
             transform.position = newPosition;

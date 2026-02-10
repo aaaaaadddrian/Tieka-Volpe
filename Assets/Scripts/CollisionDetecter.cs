@@ -19,7 +19,6 @@ public class CollisionDetecter : MonoBehaviour
     {
         if ((collision.gameObject.tag == this.gameObject.tag && this.gameObject.transform.position.y > collision.gameObject.transform.position.y) && this.gameObject.tag != "cake")
         {
-            print(collision.gameObject.name);
             Destroy(collision.gameObject);
             Vector3 pos = this.gameObject.transform.position;
             Destroy(this.gameObject);
@@ -27,11 +26,11 @@ public class CollisionDetecter : MonoBehaviour
         }
         else
         {
-            if (this.gameObject.tag == collision.gameObject.tag && this.gameObject.tag == "cake")
-            {
-                Destroy(this.gameObject);
-                Destroy(collision.gameObject);
-            }
+            // if (this.gameObject.tag == collision.gameObject.tag && this.gameObject.tag == "cake")
+            // {
+            //     Destroy(this.gameObject);
+            //     Destroy(collision.gameObject);
+            // }
         }
     }
     

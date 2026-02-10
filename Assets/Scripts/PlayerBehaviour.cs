@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,11 +10,18 @@ public class PlayerBehaviour : MonoBehaviour{
     public GameObject[] treatsToDrop;
     public float maxX;
     public float minX;
+    private Queue<GameObject> queueOfTreats;
+    
+    
     
     //cookie -> peppermint -> jello -> sand -> donut -> muffin -> icecream -> cinnamon roll-> cupcake -> cake
     
     void Start(){
-       
+       queueOfTreats = new Queue<GameObject>();
+       for (int i = 0; i < 10; i++)
+       {
+           queueOfTreats.Enqueue((treatsToDrop[Random.Range(0, treatsToDrop.Length)]));
+       }
     }
 
     
@@ -29,7 +37,8 @@ public class PlayerBehaviour : MonoBehaviour{
             Collider2D collider = currentCookie.GetComponent<Collider2D>();
             collider.enabled = false;
         }else{
-            currentCookie = Instantiate(treatsToDrop[Random.Range(0, treatsToDrop.Length)]);
+            currentCookie = Instantiate(queueOfTreats.Dequeue());
+            queueOfTreats.Enqueue((treatsToDrop[Random.Range(0, treatsToDrop.Length)]));
         }
         
 
@@ -54,7 +63,7 @@ public class PlayerBehaviour : MonoBehaviour{
             transform.position = newPosition;
         }
         
-        
-        
     }
+    
+    
 }

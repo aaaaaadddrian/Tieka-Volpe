@@ -1,12 +1,17 @@
+using TMPro;
 using UnityEngine;
 
 public class CollisionDetecter : MonoBehaviour
 {
     public GameObject[] treats;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject scorePanel;
+    private int score;
+    
+    
     void Start()
     {
-        
+        // score = 0;
+        // scorePanel.GetComponentInChildren<TextMeshPro>().text = "Score: " + score;
     }
 
     // Update is called once per frame
@@ -23,14 +28,18 @@ public class CollisionDetecter : MonoBehaviour
             Vector3 pos = this.gameObject.transform.position;
             Destroy(this.gameObject);
             Instantiate(treats[0], pos, Quaternion.identity).GetComponent<Collider2D>().enabled = true;
+            // scorePanel.GetComponentInChildren<TextMeshPro>().text =  "Score: " + score + (int)(100 * this.gameObject.transform.localScale.x);
+            // score = score + (int)(100 * this.gameObject.transform.localScale.x);
         }
         else
         {
-            // if (this.gameObject.tag == collision.gameObject.tag && this.gameObject.tag == "cake")
-            // {
-            //     Destroy(this.gameObject);
-            //     Destroy(collision.gameObject);
-            // }
+            if (this.gameObject.tag == collision.gameObject.tag && this.gameObject.tag == "cake")
+            {
+                Destroy(this.gameObject);
+                Destroy(collision.gameObject);
+                // scorePanel.GetComponentInChildren<TextMeshPro>().text = "Score: " + score + 1000;
+                // score = score + 1000;
+            }
         }
     }
     

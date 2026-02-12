@@ -7,6 +7,8 @@ public class TopBorderScript : MonoBehaviour
 
     private float timeout = 2f;
     private float timeStart;
+    public GameObject gameOverScreen;
+    public GameObject player;
     
     void Start()
     {
@@ -29,6 +31,8 @@ public class TopBorderScript : MonoBehaviour
         if (Time.time - timeStart > timeout)
         {
             print("YOU LOSE");
+            gameOverScreen.SetActive(true);
+            player.GetComponent<PlayerBehaviour>().enabled = false;
         }
     }
 

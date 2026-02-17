@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,11 +7,12 @@ public class PlayerBehaviour : MonoBehaviour{
     public float speed;
     private GameObject currentCookie;
     public float offY;
-    public GameObject cookie;
     public GameObject[] treatsToDrop;
     public float maxX;
     public float minX;
     private Queue<GameObject> queueOfTreats;
+    public GameObject scorePanel;
+    private int score;
     
     
     
@@ -22,6 +24,10 @@ public class PlayerBehaviour : MonoBehaviour{
        {
            queueOfTreats.Enqueue((treatsToDrop[Random.Range(0, treatsToDrop.Length)]));
        }
+       
+       score = 0;
+       scorePanel.GetComponentInChildren<TMP_Text>().text = "Score: " + score;
+      
     }
 
     
@@ -63,6 +69,12 @@ public class PlayerBehaviour : MonoBehaviour{
             transform.position = newPosition;
         }
         
+    }
+
+    public void updateScore(int valueIncrease)
+    {
+        score = score + valueIncrease;
+        scorePanel.GetComponentInChildren<TMP_Text>().text = "Score: " + score;
     }
     
     

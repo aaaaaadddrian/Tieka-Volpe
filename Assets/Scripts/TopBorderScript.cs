@@ -8,7 +8,6 @@ public class TopBorderScript : MonoBehaviour
     private float timeout = 2f;
     private float timeStart;
     public GameObject gameOverScreen;
-    public GameObject player;
     
     void Start()
     {
@@ -32,12 +31,8 @@ public class TopBorderScript : MonoBehaviour
         {
             print("YOU LOSE");
             gameOverScreen.SetActive(true);
-            player.GetComponent<PlayerBehaviour>().enabled = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().enabled = false;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        timeStart = 0.0f;
-    }
 }

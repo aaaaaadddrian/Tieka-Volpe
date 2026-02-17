@@ -233,7 +233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.092729166, y: 0.05622723}
-  m_AnchoredPosition: {x: 1372.12, y: 688.93}
+  m_AnchoredPosition: {x: 1372.1201, y: 688.93005}
   m_SizeDelta: {x: 144.37, y: 42.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &119637968
@@ -759,7 +759,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopBorderScript
   gameOverScreen: {fileID: 309484099}
-  player: {fileID: 0}
 --- !u!61 &397687510
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1475,7 +1474,7 @@ GameObject:
   - component: {fileID: 1548191669}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1494,7 +1493,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBehaviour
   speed: 0.07
   offY: -0.6
-  cookie: {fileID: 0}
   treatsToDrop:
   - {fileID: 6061761781978857716, guid: bedf367184de85740a52de29baa80d38, type: 3}
   - {fileID: 7270274904683423478, guid: 012b971a75b3cdd409ec4ed374c4485d, type: 3}
@@ -1502,6 +1500,7 @@ MonoBehaviour:
   - {fileID: 729661839384913408, guid: 53b6e97bcbb549741a49141a6dd99061, type: 3}
   maxX: 2.13
   minX: -2.6
+  scorePanel: {fileID: 119637966}
 --- !u!212 &1548191670
 SpriteRenderer:
   serializedVersion: 2
@@ -1717,10 +1716,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 42.65
   m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -1756,7 +1755,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -62.656456, y: 0, z: -59.64501, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

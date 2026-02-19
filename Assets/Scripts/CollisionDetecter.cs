@@ -27,6 +27,7 @@ public class CollisionDetecter : MonoBehaviour
             Destroy(this.gameObject);
             Instantiate(treats[0], pos, Quaternion.identity).GetComponent<Collider2D>().enabled = true;
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().updateScore((int)(100 * this.gameObject.transform.localScale.x));
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().playSound();
         }
         else
         {
@@ -35,6 +36,7 @@ public class CollisionDetecter : MonoBehaviour
                 Destroy(this.gameObject);
                 Destroy(collision.gameObject);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().updateScore(1000);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().playSound();
             }
         }
     }

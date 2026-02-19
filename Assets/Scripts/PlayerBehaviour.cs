@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,9 @@ public class PlayerBehaviour : MonoBehaviour{
     private Queue<GameObject> queueOfTreats;
     public GameObject scorePanel;
     private int score;
+
+    private float startTime = 14.03f;
+    private float endTime = 14.71f;
     
     
     
@@ -77,5 +81,21 @@ public class PlayerBehaviour : MonoBehaviour{
         scorePanel.GetComponentInChildren<TMP_Text>().text = "Score: " + score;
     }
     
+    public void playSound()
+    {
+        float beginTime = Time.time;
+        this.gameObject.GetComponent<AudioSource>().time = startTime;
+        this.gameObject.GetComponent<AudioSource>().Play();
+        
+        float duration = endTime - startTime;
+
+        while (duration < beginTime - startTime)
+        {
+            this.gameObject.GetComponent<AudioSource>().Stop();
+        }
+        
+        
+        
+    }
     
 }

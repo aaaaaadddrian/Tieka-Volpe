@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -11,12 +12,14 @@ public class PlayerBehaviour : MonoBehaviour{
     public GameObject[] treatsToDrop;
     public float maxX;
     public float minX;
-    private Queue<GameObject> queueOfTreats;
+    public Queue<GameObject> queueOfTreats;
     public GameObject scorePanel;
     private int score;
 
     private float startTime = 14.03f;
     private float endTime = 14.71f;
+
+    private int currentTreat = 4;
     
     
     
@@ -24,9 +27,13 @@ public class PlayerBehaviour : MonoBehaviour{
     
     void Start(){
        queueOfTreats = new Queue<GameObject>();
-       for (int i = 0; i < 10; i++)
+       for (int i = 0; i < 4; i++)
        {
            queueOfTreats.Enqueue((treatsToDrop[Random.Range(0, treatsToDrop.Length)]));
+           // GameObject.FindGameObjectWithTag("Queue").GetComponent<TheTreatQueue>().childRenderers[i] =
+           //     queueOfTreats.Last().GetComponent<SpriteRenderer>();
+           GameObject.FindGameObjectWithTag(currentTreat+"").GetComponent<SpriteRenderer>().sprite = queueOfTreats.Last().GetComponent<SpriteRenderer>().sprite;
+           currentTreat--;
        }
        
        score = 0;
@@ -48,7 +55,13 @@ public class PlayerBehaviour : MonoBehaviour{
             collider.enabled = false;
         }else{
             currentCookie = Instantiate(queueOfTreats.Dequeue());
+            GameObject.FindGameObjectWithTag("1").GetComponent<SpriteRenderer>().sprite =
+                GameObject.FindGameObjectWithTag("2").GetComponent<SpriteRenderer>().sprite;
+            GameObject.FindGameObjectWithTag("2").GetComponent<SpriteRenderer>().sprite = GameObject.FindGameObjectWithTag("3").GetComponent<SpriteRenderer>().sprite;
+            GameObject.FindGameObjectWithTag("3").GetComponent<SpriteRenderer>().sprite = GameObject.FindGameObjectWithTag("4").GetComponent<SpriteRenderer>().sprite;
+            
             queueOfTreats.Enqueue((treatsToDrop[Random.Range(0, treatsToDrop.Length)]));
+            GameObject.FindGameObjectWithTag("4").GetComponent<SpriteRenderer>().sprite = queueOfTreats.Last().GetComponent<SpriteRenderer>().sprite;
         }
         
 
@@ -73,6 +86,8 @@ public class PlayerBehaviour : MonoBehaviour{
             transform.position = newPosition;
         }
         
+        
+        
     }
 
     public void updateScore(int valueIncrease)
@@ -83,18 +98,8 @@ public class PlayerBehaviour : MonoBehaviour{
     
     public void playSound()
     {
-        float beginTime = Time.time;
         this.gameObject.GetComponent<AudioSource>().time = startTime;
         this.gameObject.GetComponent<AudioSource>().Play();
-        
-        float duration = endTime - startTime;
-
-        while (duration < beginTime - startTime)
-        {
-            this.gameObject.GetComponent<AudioSource>().Stop();
-        }
-        
-        
         
     }
     
